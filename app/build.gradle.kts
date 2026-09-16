@@ -1,0 +1,124 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
+}
+
+fun getGitCommitHash(): String = try {
+    val process = ProcessBuilder("git", "rev-parse", "--short", "HEAD")
+        .directory(rootDir)
+        .redirectErrorStream(true)
+        .start()
+    val hash = process.inputStream.bufferedReader().readText().trim()
+    process.waitFor()
+    if (process.exitValue() == 0 && hash.isNotEmpty()) hash else "unknown"
+} catch (_: Throwable) {
+    "unknown"
+}
+
+val appVersionCode = 310
+fun getVersionChannel(): String = try {
+    val process = ProcessBuilder("git", "rev-parse", "--abbrev-ref", "HEAD")
+        .directory(rootDir)
+        .redirectErrorStream(true)
+        .start()
+    val branch = process.inputStream.bufferedReader().readText().trim()
+    process.waitFor()
+    if (process.exitValue() != 0 || branch.isEmpty() || branch == "HEAD") {
+        ""
+    } else if (branch == "main" || branch == "master") {
+        ""
+    } else {
+        "-" + branch.replace(Regex("[^A-Za-z0-9._-]"), "-")
+    }
+} catch (_: Throwable) {
+    ""
+}
+fun getCommitCount(): String = try {
+    val process = ProcessBuilder("git", "rev-list", "--count", "HEAD")
+        .directory(rootDir)
+        .redirectErrorStream(true)
+        .start()
+    val count = process.inputStream.bufferedReader().readText().trim()
+    process.waitFor()
+    if (process.exitValue() == 0 && count.isNotEmpty()) count else "0"
+} catch (_: Throwable) {
+    "0"
+}
+
+val channel = getVersionChannel()
+val gitHash = getGitCommitHash()
+val appVersionName = if (channel == "-testing") "testing${getCommitCount()}-$gitHash" else "3.1.0$channel"
+
+android {
+    namespace = "io.github.s1ddhants1.swiftbackupprem"
+    compileSdk = 37
+    ndkVersion = "29.0.14206865"
+
+    defaultConfig {
+        applicationId = "io.github.s1ddhants1.swiftbackupprem"
+        minSdk = 27
+        targetSdk = 37
+        versionCode = appVersionCode
+        versionName = appVersionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        buildConfig = true
+        compose = true
+        resValues = false
+    }
+    packaging {
+        resources {
+            merges += "META-INF/xposed/*"
+        }
+    }
+}
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        variant.outputs.forEach { output ->
+            output.outputFileName.set("SwiftBackupPrem_${appVersionName}-${variant.name}.apk")
+        }
+    }
+}
+
+dependencies {
+    compileOnly(libs.libxposed.api)
+    implementation(libs.libxposed.service)
+    implementation(libs.dexkit)
+    implementation(libs.kotlinx.serialization.json)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.compose)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+
+    testImplementation(libs.libxposed.api)
+    testImplementation(libs.libxposed.service)
+    testImplementation(libs.bundles.unit.test)
+}

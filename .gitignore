@@ -1,0 +1,18 @@
+*.iml
+.gradle
+/local.properties
+.idea
+.DS_Store
+build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+release
+release.keystore
+.kotlin
+
+# Documentation
+/docs/
+/AGENTS.md
+/agents.md

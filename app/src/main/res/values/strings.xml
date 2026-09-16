@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwiftBackupPrem</string>
+    <string name="app_description">Swift Backup Premium</string>
+
+    <!-- Top App Bar & Menu -->
+    <string name="screen_settings">SwiftBackupPrem</string>
+    <string name="screen_about">About</string>
+    <string name="menu_export_config">Export Config</string>
+    <string name="menu_import_config">Import Config</string>
+    <string name="menu_about">About</string>
+    <string name="cd_back_to_settings">Back to Settings</string>
+    <string name="cd_menu_options">Menu Options</string>
+
+    <!-- Action Buttons & Snackbars -->
+    <string name="btn_force_stop">Force Stop</string>
+    <string name="btn_open_app">Open App</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_review">Review</string>
+    <string name="btn_finish_save">Finish &amp; Save</string>
+    <string name="btn_start_setup">Start Setup</string>
+    <string name="btn_edit_setup">Edit Setup</string>
+    <string name="btn_import_json">Import google-services.json</string>
+    <string name="btn_open_console">Open Console</string>
+    <string name="btn_copy_rules">Copy Rules</string>
+    <string name="btn_copy_package">Copy Package</string>
+    <string name="btn_copy_fingerprint">Copy Fingerprint</string>
+    <string name="btn_cloud_console">Cloud Console</string>
+    <string name="btn_enable_drive_api">Enable Drive API</string>
+    <string name="btn_view_source_github">View Source on GitHub</string>
+    <string name="btn_github">GitHub</string>
+    <string name="btn_telegram_support">Telegram Support Group</string>
+
+    <string name="msg_config_exported">Config exported</string>
+    <string name="msg_export_failed">Export failed: %1$s</string>
+    <string name="msg_config_imported">Config imported</string>
+    <string name="msg_import_failed">Import failed: %1$s</string>
+    <string name="msg_swift_backup_force_stopped">Swift Backup force-stopped</string>
+    <string name="msg_opened_swift_backup_settings">Opened Swift Backup app settings</string>
+
+    <!-- Framework Status Card -->
+    <string name="framework_active_title">LSPosed Module Active</string>
+    <string name="framework_inactive_title">LSPosed Module Not Enabled</string>
+    <string name="framework_active_desc">Connected to %1$s %2$s</string>
+    <string name="framework_inactive_desc">Enable module in LSPosed manager</string>
+
+    <!-- Settings Switches -->
+    <string name="pref_enable_premium_title">Enable Premium</string>
+    <string name="pref_enable_premium_subtitle">Unlock premium features &amp; bypass license checks</string>
+    <string name="pref_disable_telemetry_title">Disable Telemetry &amp; Tracking</string>
+    <string name="pref_disable_telemetry_subtitle">Block analytics, crash reports, and tracking telemetry</string>
+    <string name="pref_custom_firebase_title">Custom firebase app</string>
+    <string name="pref_custom_firebase_subtitle">Use personal Firebase database &amp; credentials</string>
+
+    <!-- Experimental Section -->
+    <string name="section_advanced_features">Experimental Features</string>
+    <string name="section_advanced_features_subtitle">Enable experimental features</string>
+    <string name="pref_enable_drive_discovery_title">Universal Cloud Discovery &amp; Cloud Restore</string>
+    <string name="pref_enable_drive_discovery_subtitle">Discover, decode, and index cloud backups across Drive, WebDAV, S3, Dropbox, OneDrive, Box &amp; pCloud</string>
+    <string name="pref_enable_drive_discovery_requires_custom_firebase">Requires Custom Firebase App to be enabled</string>
+
+    <!-- Setup Wizard -->
+    <string name="wizard_step_format">Step %1$d of %2$d</string>
+    <string name="wizard_title_step_1">Welcome &amp; Import</string>
+    <string name="wizard_title_step_2">Database Setup</string>
+    <string name="wizard_title_step_3">Auth &amp; Storage</string>
+    <string name="wizard_title_step_4">OAuth Client</string>
+    <string name="wizard_title_step_5">Review &amp; Finish</string>
+
+    <string name="wizard_firebase_configured_title">Firebase Configured</string>
+    <string name="wizard_firebase_configured_desc">Force stop and restart Swift Backup to apply changes</string>
+    <string name="wizard_guided_setup_title">Guided Manual Setup</string>
+    <string name="wizard_one_tap_import_title">One-Tap Import</string>
+    <string name="wizard_or_divider">OR</string>
+    <string name="wizard_credentials_complete">Credentials Complete!</string>
+    <string name="wizard_checklist_title">Configuration Checklist</string>
+    <string name="wizard_storage_bucket_optional">Storage Bucket (Optional)</string>
+    <string name="wizard_status_ok">OK</string>
+    <string name="wizard_status_missing">Missing</string>
+    <string name="wizard_status_auto_default">Auto Default</string>
+
+    <!-- Input Field Labels -->
+    <string name="label_project_id">Project ID</string>
+    <string name="label_firebase_db_url">Firebase Database URL</string>
+    <string name="label_google_app_id">Google App ID</string>
+    <string name="label_google_api_key">Google Api Key</string>
+    <string name="label_gcm_sender_id">GCM Sender ID (Project Number)</string>
+    <string name="label_google_storage_bucket">Google Storage Bucket (Optional)</string>
+    <string name="label_client_id">Client ID</string>
+
+    <!-- About Screen -->
+    <string name="about_app_summary">An advanced Xposed / LSPosed module for Swift Backup providing Premium features, privacy controls, and custom Firebase backend integration</string>
+    <string name="about_version_format">Version %1$s (%2$d)</string>
+    <string name="about_authors_maintainers">Authors &amp; Maintainers</string>
+    <string name="about_original_author_role">Original Author</string>
+    <string name="about_maintainer_role">Maintainer</string>
+    <string name="about_libraries_technologies">Libraries &amp; Technologies</string>
+    <string name="about_lib_dexkit">DexKit by LuckyPray</string>
+    <string name="about_lib_libxposed">LibXposed / Xposed API</string>
+    <string name="about_lib_compose">AndroidX Jetpack Compose &amp; Material 3</string>
+    <string name="about_lib_serialization">Kotlinx Serialization JSON</string>
+
+    <!-- Accessibility Content Descriptions -->
+    <string name="cd_clear_input">Clear input</string>
+    <string name="cd_app_icon">SwiftBackupPrem App Icon</string>
+    <string name="cd_author_avatar">Author Avatar</string>
+    <string name="cd_maintainer_avatar">Maintainer Avatar</string>
+    <string name="cd_github_icon">GitHub Icon</string>
+    <string name="cd_telegram_icon">Telegram Icon</string>
+
+    <!-- Backup Migrator & Decryptor Tool -->
+    <string name="migrator_step1_title">1. Source Folder</string>
+    <string name="migrator_source_path_label">Source Path</string>
+    <string name="migrator_step2_title">2. Decryption Key (Source UID)</string>
+    <string name="migrator_source_uid_label">Source Firebase UID</string>
+    <string name="migrator_detected_uids">Key Presets &amp; Detected UIDs:</string>
+    <string name="migrator_chip_anon_key">Shared Anonymous Key</string>
+    <string name="migrator_step3_title">3. Target Encryption Mode</string>
+    <string name="migrator_mode_anon_title">Shared Anonymous Key (Recommended)</string>
+    <string name="migrator_mode_anon_desc">Restorable offline in Swift Backup without login</string>
+    <string name="migrator_mode_custom_title">Custom Firebase UID</string>
+    <string name="migrator_mode_custom_desc">Re-encrypt for your custom Firebase account UID</string>
+    <string name="migrator_target_uid_label">Target UID</string>
+    <string name="migrator_mode_unencrypted_title">Unencrypted Backups</string>
+    <string name="migrator_mode_unencrypted_desc">Strips AES Conceal encryption, keeps Swift Backup directory layout</string>
+    <string name="migrator_mode_portable_checkbox">Convert to standard portable formats (.apk, .tar.gz, .json)</string>
+    <string name="migrator_mode_portable_checkbox_desc">Extracts standard APKs and tar archives for PC or external tools</string>
+    <string name="migrator_step4_title">4. Destination Folder</string>
+    <string name="migrator_output_path_label">Output Path</string>
+    <string name="migrator_btn_start">Start Migration</string>
+    <string name="migrator_result_success_title">Migration Completed Successfully</string>
+    <string name="migrator_result_fail_title">Migration Completed with Warnings</string>
+    <string name="migrator_result_summary_format">Successfully migrated %1$d apps and %2$d folders.\nTarget Account Hash: %3$s</string>
+    <string name="migrator_logs_title">Execution Logs</string>
+
+    <!-- Backup Migration Hub -->
+    <string name="screen_experimental_hub">Backup Migration</string>
+    <string name="btn_open_migrator">Open Migrator</string>
+    <string name="tab_local_migrator">Local Migration</string>
+    <string name="tab_cloud_discovery">Cloud Discovery &amp; Injection</string>
+
+    <string name="cloud_tab_header_desc">Manage Backup Migration Locally or Across Cloud Providers</string>
+
+    <string name="pref_drive_oauth_scope_title">Google Drive Full OAuth Scope</string>
+    <string name="pref_drive_oauth_scope_desc">Requests auth/drive to discover existing Drive backups</string>
+
+    <string name="pref_cloud_discovery_title">Universal Cloud Discovery</string>
+    <string name="pref_cloud_discovery_desc">Scans all configured cloud providers during restore refresh</string>
+
+    <string name="pref_snapshot_injection_title">Realtime DB Snapshot Injection</string>
+    <string name="pref_snapshot_injection_desc">Injects discovered cloud backups into restore lists</string>
+    <string name="pref_snapshot_injection_requires_discovery">Requires Custom Firebase App &amp; Universal Cloud Discovery to be enabled</string>
+
+    <string name="pref_sync_metadata_firebase_title">Sync Metadata to Custom Firebase</string>
+    <string name="pref_sync_metadata_firebase_desc">Syncs reconstructed metadata to your Firebase instance</string>
+    <string name="pref_rtdb_not_configured">Firebase Database URL not configured</string>
+    <string name="pref_rtdb_requires_config">Requires Firebase Database URL in setup</string>
+    <string name="btn_sync_all_firebase">Sync Now</string>
+    <string name="msg_sync_firebase_started">Syncing metadata to Custom Firebase...</string>
+    <string name="msg_sync_firebase_success">Synced %1$d metadata records to Custom Firebase</string>
+    <string name="msg_sync_firebase_no_new">No new backup records found to sync</string>
+    <string name="cloud_cache_title">Cloud Discovery Cache</string>
+    <string name="cloud_cache_desc">Local cache for instant offline navigation</string>
+    <string name="btn_clear_cloud_cache">Clear Cloud Cache</string>
+    <string name="msg_cloud_cache_cleared">Cloud discovery cache cleared</string>
+
+    <string name="pref_unlock_local_cloud_features_title">Unlock Cloud Features for Local Accounts</string>
+    <string name="pref_unlock_local_cloud_features_desc">Enables WebDAV, Nextcloud, S3, and cloud backup features for local/anonymous accounts without Firebase RTDB</string>
+
+    <!-- Hardcoded UI strings (migrator screen / errors) -->
+    <string name="migrator_storage_permission_title">Storage Permission Required</string>
+    <string name="migrator_storage_permission_desc">All Files Access is required to scan and migrate backup folders on device storage.</string>
+    <string name="migrator_grant_all_files_access">Grant All Files Access</string>
+    <string name="migrator_processing">Processing…</string>
+    <string name="migrator_synced_to_firebase">Synced to Firebase: %1$d</string>
+    <string name="migrator_output_label">Output: %1$s</string>
+    <string name="migrator_na">N/A</string>
+    <string name="migrator_firebase_rtdb">Firebase RTDB</string>
+    <string name="msg_sync_failed">Sync failed: %1$s</string>
+
+    <string name="err_source_dir_invalid">Source directory does not exist or is invalid.</string>
+    <string name="err_source_uid_required">Source Firebase UID is required to decrypt backups.</string>
+    <string name="err_target_path_required">Destination folder path is required.</string>
+    <string name="err_target_uid_required">Target Firebase UID is required.</string>
+    <string name="log_init_migration">Initializing migration pipeline…</string>
+    <string name="log_migration_finished">Migration finished. Total Apps: %1$d, Folders: %2$d</string>
+    <string name="log_synced_suffix"> (Synced to Firebase: %1$d)</string>
+    <string name="step_migrating">Migrating</string>
+    <string name="step_processing_apps">Processing Apps</string>
+    <string name="step_processing_folders">Processing Folders</string>
+    <string name="log_processing_app">Processing app %1$s…</string>
+    <string name="log_processing_folder">Processing folder %1$s…</string>
+    <string name="log_start_migration_mode">Starting migration. Mode: %1$s</string>
+    <string name="mode_portable_files">Standard Portable Files (.apk, .tar, .json)</string>
+    <string name="mode_encrypted">Encrypted (%1$s)</string>
+    <string name="mode_unencrypted_plaintext">Unencrypted (Swift Backup Plaintext)</string>
+    <string name="log_target_account_hash">Target Account Hash: %1$s</string>
+    <string name="log_source_directory">Source directory: %1$s</string>
+    <string name="log_target_directory">Target directory: %1$s</string>
+    <string name="log_migration_finished_detail">Migration finished! Successfully processed %1$d apps and %2$d folders.</string>
+    <string name="err_source_dir_missing">Source directory does not exist or is not a directory: %1$s</string>
+
+    <string name="sync_disabled">Firebase metadata sync is disabled.</string>
+    <string name="sync_db_url_empty">Firebase Realtime Database URL is empty.</string>
+    <string name="sync_auth_unresolved">Could not resolve Firebase Auth credentials. Please ensure Swift Backup is logged into your Custom Firebase account.</string>
+
+    <string name="cd_pick_directory">Pick Directory</string>
+    <string name="cd_paste_uid">Paste UID</string>
+    <string name="cd_detect_uids">Detect UIDs</string>
+    <string name="cd_pick_output_directory">Pick Output Directory</string>
+    <string name="label_source_uid_placeholder">Source UID</string>
+    <string name="label_target_uid_placeholder">Enter destination Firebase UID</string>
+    <string name="btn_syncing">Syncing…</string>
+    <string name="msg_unknown_error">unknown error</string>
+</resources>

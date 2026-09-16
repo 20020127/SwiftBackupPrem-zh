@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwiftBackupPrem</string>
+    <string name="app_description">Swift Backup 高级版</string>
+
+    <!-- Top App Bar & Menu -->
+    <string name="screen_settings">SwiftBackupPrem</string>
+    <string name="screen_about">关于</string>
+    <string name="menu_export_config">导出配置</string>
+    <string name="menu_import_config">导入配置</string>
+    <string name="menu_about">关于</string>
+    <string name="cd_back_to_settings">返回设置</string>
+    <string name="cd_menu_options">菜单选项</string>
+
+    <!-- Action Buttons & Snackbars -->
+    <string name="btn_force_stop">强行停止</string>
+    <string name="btn_open_app">打开应用</string>
+    <string name="btn_back">返回</string>
+    <string name="btn_next">下一步</string>
+    <string name="btn_review">检查</string>
+    <string name="btn_finish_save">完成并保存</string>
+    <string name="btn_start_setup">开始设置</string>
+    <string name="btn_edit_setup">编辑设置</string>
+    <string name="btn_import_json">导入 google-services.json</string>
+    <string name="btn_open_console">打开控制台</string>
+    <string name="btn_copy_rules">复制规则</string>
+    <string name="btn_copy_package">复制包名</string>
+    <string name="btn_copy_fingerprint">复制指纹</string>
+    <string name="btn_cloud_console">云端控制台</string>
+    <string name="btn_enable_drive_api">启用 Drive API</string>
+    <string name="btn_view_source_github">在 GitHub 查看源码</string>
+    <string name="btn_github">GitHub</string>
+    <string name="btn_telegram_support">Telegram 支持群</string>
+
+    <string name="msg_config_exported">配置已导出</string>
+    <string name="msg_export_failed">导出失败：%1$s</string>
+    <string name="msg_config_imported">配置已导入</string>
+    <string name="msg_import_failed">导入失败：%1$s</string>
+    <string name="msg_swift_backup_force_stopped">Swift Backup 已强行停止</string>
+    <string name="msg_opened_swift_backup_settings">已打开 Swift Backup 应用设置</string>
+
+    <!-- Framework Status Card -->
+    <string name="framework_active_title">LSPosed 模块已激活</string>
+    <string name="framework_inactive_title">LSPosed 模块未启用</string>
+    <string name="framework_active_desc">已连接到 %1$s %2$s</string>
+    <string name="framework_inactive_desc">请在 LSPosed 管理器中启用模块</string>
+
+    <!-- Settings Switches -->
+    <string name="pref_enable_premium_title">启用高级版</string>
+    <string name="pref_enable_premium_subtitle">解锁高级功能并绕过许可证检查</string>
+    <string name="pref_disable_telemetry_title">禁用遥测与追踪</string>
+    <string name="pref_disable_telemetry_subtitle">拦截分析、崩溃报告与追踪遥测</string>
+    <string name="pref_custom_firebase_title">自定义 Firebase 应用</string>
+    <string name="pref_custom_firebase_subtitle">使用个人 Firebase 数据库与凭据</string>
+
+    <!-- Experimental Section -->
+    <string name="section_advanced_features">实验性功能</string>
+    <string name="section_advanced_features_subtitle">启用实验性功能</string>
+    <string name="pref_enable_drive_discovery_title">通用云端扫描与云恢复</string>
+    <string name="pref_enable_drive_discovery_subtitle">发现、解析并索引 Drive、WebDAV、S3、Dropbox、OneDrive、Box 与 pCloud 上的云备份</string>
+    <string name="pref_enable_drive_discovery_requires_custom_firebase">需要启用自定义 Firebase 应用</string>
+
+    <!-- Setup Wizard -->
+    <string name="wizard_step_format">第 %1$d 步，共 %2$d 步</string>
+    <string name="wizard_title_step_1">欢迎与导入</string>
+    <string name="wizard_title_step_2">数据库设置</string>
+    <string name="wizard_title_step_3">认证与存储</string>
+    <string name="wizard_title_step_4">OAuth 客户端</string>
+    <string name="wizard_title_step_5">检查并完成</string>
+
+    <string name="wizard_firebase_configured_title">Firebase 已配置</string>
+    <string name="wizard_firebase_configured_desc">请强行停止并重启 Swift Backup 以应用更改</string>
+    <string name="wizard_guided_setup_title">引导式手动设置</string>
+    <string name="wizard_one_tap_import_title">一键导入</string>
+    <string name="wizard_or_divider">或</string>
+    <string name="wizard_credentials_complete">凭据已完整！</string>
+    <string name="wizard_checklist_title">配置检查清单</string>
+    <string name="wizard_storage_bucket_optional">存储桶（可选）</string>
+    <string name="wizard_status_ok">正常</string>
+    <string name="wizard_status_missing">缺失</string>
+    <string name="wizard_status_auto_default">自动默认</string>
+
+    <!-- Input Field Labels -->
+    <string name="label_project_id">项目 ID</string>
+    <string name="label_firebase_db_url">Firebase 数据库 URL</string>
+    <string name="label_google_app_id">Google App ID</string>
+    <string name="label_google_api_key">Google API 密钥</string>
+    <string name="label_gcm_sender_id">GCM 发送者 ID（项目编号）</string>
+    <string name="label_google_storage_bucket">Google 存储桶（可选）</string>
+    <string name="label_client_id">客户端 ID</string>
+
+    <!-- About Screen -->
+    <string name="about_app_summary">面向 Swift Backup 的高级 Xposed / LSPosed 模块，提供高级版功能、隐私控制与自定义 Firebase 后端集成</string>
+    <string name="about_version_format">版本 %1$s (%2$d)</string>
+    <string name="about_authors_maintainers">作者与维护者</string>
+    <string name="about_original_author_role">原作者</string>
+    <string name="about_maintainer_role">维护者</string>
+    <string name="about_libraries_technologies">库与技术</string>
+    <string name="about_lib_dexkit">DexKit（LuckyPray）</string>
+    <string name="about_lib_libxposed">LibXposed / Xposed API</string>
+    <string name="about_lib_compose">AndroidX Jetpack Compose 与 Material 3</string>
+    <string name="about_lib_serialization">Kotlinx Serialization JSON</string>
+
+    <!-- Accessibility Content Descriptions -->
+    <string name="cd_clear_input">清空输入</string>
+    <string name="cd_app_icon">SwiftBackupPrem 应用图标</string>
+    <string name="cd_author_avatar">作者头像</string>
+    <string name="cd_maintainer_avatar">维护者头像</string>
+    <string name="cd_github_icon">GitHub 图标</string>
+    <string name="cd_telegram_icon">Telegram 图标</string>
+
+    <!-- Backup Migrator & Decryptor Tool -->
+    <string name="migrator_step1_title">1. 源文件夹</string>
+    <string name="migrator_source_path_label">源路径</string>
+    <string name="migrator_step2_title">2. 解密密钥（源 UID）</string>
+    <string name="migrator_source_uid_label">源 Firebase UID</string>
+    <string name="migrator_detected_uids">密钥预设与检测到的 UID：</string>
+    <string name="migrator_chip_anon_key">共享匿名密钥</string>
+    <string name="migrator_step3_title">3. 目标加密模式</string>
+    <string name="migrator_mode_anon_title">共享匿名密钥（推荐）</string>
+    <string name="migrator_mode_anon_desc">无需登录即可在 Swift Backup 中离线恢复</string>
+    <string name="migrator_mode_custom_title">自定义 Firebase UID</string>
+    <string name="migrator_mode_custom_desc">按你的自定义 Firebase 账号 UID 重新加密</string>
+    <string name="migrator_target_uid_label">目标 UID</string>
+    <string name="migrator_mode_unencrypted_title">未加密备份</string>
+    <string name="migrator_mode_unencrypted_desc">移除 AES Conceal 加密，保留 Swift Backup 目录结构</string>
+    <string name="migrator_mode_portable_checkbox">转换为标准便携格式（.apk、.tar.gz、.json）</string>
+    <string name="migrator_mode_portable_checkbox_desc">导出标准 APK 与 tar 压缩包，便于在电脑或外部工具中使用</string>
+    <string name="migrator_step4_title">4. 目标文件夹</string>
+    <string name="migrator_output_path_label">输出路径</string>
+    <string name="migrator_btn_start">开始迁移</string>
+    <string name="migrator_result_success_title">迁移成功完成</string>
+    <string name="migrator_result_fail_title">迁移完成，但存在警告</string>
+    <string name="migrator_result_summary_format">已成功迁移 %1$d 个应用和 %2$d 个文件夹。\n目标账号哈希：%3$s</string>
+    <string name="migrator_logs_title">执行日志</string>
+
+    <!-- Backup Migration Hub -->
+    <string name="screen_experimental_hub">备份迁移</string>
+    <string name="btn_open_migrator">打开迁移工具</string>
+    <string name="tab_local_migrator">本地迁移</string>
+    <string name="tab_cloud_discovery">云端扫描与注入</string>
+
+    <string name="cloud_tab_header_desc">在本地或跨云服务商管理备份迁移</string>
+
+    <string name="pref_drive_oauth_scope_title">Google Drive 完整 OAuth 权限</string>
+    <string name="pref_drive_oauth_scope_desc">请求 auth/drive 权限以发现现有 Drive 备份</string>
+
+    <string name="pref_cloud_discovery_title">通用云端扫描</string>
+    <string name="pref_cloud_discovery_desc">恢复刷新时扫描所有已配置的云服务商</string>
+
+    <string name="pref_snapshot_injection_title">实时数据库快照注入</string>
+    <string name="pref_snapshot_injection_desc">将发现的云备份注入恢复列表</string>
+    <string name="pref_snapshot_injection_requires_discovery">需要启用自定义 Firebase 应用与通用云端扫描</string>
+
+    <string name="pref_sync_metadata_firebase_title">同步元数据到自定义 Firebase</string>
+    <string name="pref_sync_metadata_firebase_desc">将重建的元数据同步到你的 Firebase 实例</string>
+    <string name="pref_rtdb_not_configured">Firebase 数据库 URL 未配置</string>
+    <string name="pref_rtdb_requires_config">需要在设置中填写 Firebase 数据库 URL</string>
+    <string name="btn_sync_all_firebase">立即同步</string>
+    <string name="msg_sync_firebase_started">正在同步元数据到自定义 Firebase…</string>
+    <string name="msg_sync_firebase_success">已同步 %1$d 条元数据到自定义 Firebase</string>
+    <string name="msg_sync_firebase_no_new">没有发现需要同步的新备份记录</string>
+    <string name="cloud_cache_title">云端扫描缓存</string>
+    <string name="cloud_cache_desc">本地缓存，便于离线即时浏览</string>
+    <string name="btn_clear_cloud_cache">清除云端缓存</string>
+    <string name="msg_cloud_cache_cleared">云端扫描缓存已清除</string>
+
+    <string name="pref_unlock_local_cloud_features_title">为本地账号解锁云端功能</string>
+    <string name="pref_unlock_local_cloud_features_desc">在无 Firebase RTDB 的情况下，为本地/匿名账号启用 WebDAV、Nextcloud、S3 与云备份功能</string>
+
+    <!-- Hardcoded UI strings (migrator screen / errors) -->
+    <string name="migrator_storage_permission_title">需要存储权限</string>
+    <string name="migrator_storage_permission_desc">扫描并迁移设备存储备份文件夹需要「所有文件访问权限」。</string>
+    <string name="migrator_grant_all_files_access">授予所有文件访问权限</string>
+    <string name="migrator_processing">处理中…</string>
+    <string name="migrator_synced_to_firebase">已同步到 Firebase：%1$d</string>
+    <string name="migrator_output_label">输出：%1$s</string>
+    <string name="migrator_na">不适用</string>
+    <string name="migrator_firebase_rtdb">Firebase 实时数据库</string>
+    <string name="msg_sync_failed">同步失败：%1$s</string>
+
+    <string name="err_source_dir_invalid">源目录不存在或无效。</string>
+    <string name="err_source_uid_required">解密备份需要填写源 Firebase UID。</string>
+    <string name="err_target_path_required">必须填写目标文件夹路径。</string>
+    <string name="err_target_uid_required">必须填写目标 Firebase UID。</string>
+    <string name="log_init_migration">正在初始化迁移流程…</string>
+    <string name="log_migration_finished">迁移完成。应用总数：%1$d，文件夹总数：%2$d</string>
+    <string name="log_synced_suffix">（已同步到 Firebase：%1$d）</string>
+    <string name="step_migrating">迁移中</string>
+    <string name="step_processing_apps">处理应用</string>
+    <string name="step_processing_folders">处理文件夹</string>
+    <string name="log_processing_app">正在处理应用 %1$s…</string>
+    <string name="log_processing_folder">正在处理文件夹 %1$s…</string>
+    <string name="log_start_migration_mode">开始迁移。模式：%1$s</string>
+    <string name="mode_portable_files">标准便携文件（.apk、.tar、.json）</string>
+    <string name="mode_encrypted">加密（%1$s）</string>
+    <string name="mode_unencrypted_plaintext">未加密（Swift Backup 明文）</string>
+    <string name="log_target_account_hash">目标账号哈希：%1$s</string>
+    <string name="log_source_directory">源目录：%1$s</string>
+    <string name="log_target_directory">目标目录：%1$s</string>
+    <string name="log_migration_finished_detail">迁移完成！已成功处理 %1$d 个应用和 %2$d 个文件夹。</string>
+    <string name="err_source_dir_missing">源目录不存在或不是目录：%1$s</string>
+
+    <string name="sync_disabled">Firebase 元数据同步已禁用。</string>
+    <string name="sync_db_url_empty">Firebase 实时数据库 URL 为空。</string>
+    <string name="sync_auth_unresolved">无法解析 Firebase 认证凭据。请确认 Swift Backup 已登录你的自定义 Firebase 账号。</string>
+
+    <string name="cd_pick_directory">选择目录</string>
+    <string name="cd_paste_uid">粘贴 UID</string>
+    <string name="cd_detect_uids">检测 UID</string>
+    <string name="cd_pick_output_directory">选择输出目录</string>
+    <string name="label_source_uid_placeholder">源 UID</string>
+    <string name="label_target_uid_placeholder">输入目标 Firebase UID</string>
+    <string name="btn_syncing">同步中…</string>
+    <string name="msg_unknown_error">未知错误</string>
+</resources>

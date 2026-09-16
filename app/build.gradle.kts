@@ -52,13 +52,13 @@ val appVersionName = if (channel == "-testing") "testing${getCommitCount()}-$git
 
 android {
     namespace = "io.github.s1ddhants1.swiftbackupprem"
-    compileSdk = 37
-    ndkVersion = "29.0.14206865"
+    compileSdk = 35
+    ndkVersion = "27.2.12479018"
 
     defaultConfig {
         applicationId = "io.github.s1ddhants1.swiftbackupprem"
         minSdk = 27
-        targetSdk = 37
+        targetSdk = 35
         versionCode = appVersionCode
         versionName = appVersionName
     }

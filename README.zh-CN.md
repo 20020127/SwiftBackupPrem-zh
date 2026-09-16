@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="../../actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/s1ddhants1/SwiftBackupPrem/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=CI" alt="CI Status" /></a>
-  <a href="../../releases"><img src="https://img.shields.io/github/v/release/s1ddhants1/SwiftBackupPrem?style=for-the-badge&color=6366f1&logo=android" alt="Release Version" /></a>
+  <a href="../../actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/20020127/SwiftBackupPrem-zh/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=CI" alt="CI Status" /></a>
+  <a href="../../releases"><img src="https://img.shields.io/github/v/release/20020127/SwiftBackupPrem-zh?style=for-the-badge&color=6366f1&logo=android" alt="Release Version" /></a>
   <a href="https://t.me/SwiftBackupPrem"><img src="https://img.shields.io/badge/Telegram-Join%20Chat-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Support Group" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/s1ddhants1/SwiftBackupPrem?style=for-the-badge&color=10b981" alt="License" /></a>
   <img src="https://img.shields.io/badge/Android-8.1%2B%20(API%2027--37)-f59e0b?style=for-the-badge&logo=android" alt="Android API Support" />
@@ -14,7 +14,19 @@
   <img src="https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-06b6d4?style=for-the-badge&logo=jetpackcompose" alt="Jetpack Compose Material 3" />
 </p>
 
-> 本仓库为 [s1ddhants1/SwiftBackupPrem](https://github.com/s1ddhants1/SwiftBackupPrem) 的**简体中文本地化分支**：界面文案与文档已翻译为中文，功能与上游保持一致。
+> [!IMPORTANT]
+> **原作者与版权**
+>
+> - **原作者 / Original Author**：[Juby210](https://github.com/Juby210)
+> - **上游维护者 / Upstream Maintainer**：[s1ddhants1](https://github.com/s1ddhants1)
+> - **上游仓库 / Upstream**：[s1ddhants1/SwiftBackupPrem](https://github.com/s1ddhants1/SwiftBackupPrem)
+> - **许可证**：[MIT License](LICENSE)
+>
+> 本仓库 **20020127/SwiftBackupPrem-zh** 仅是上游项目的**简体中文本地化分支**，未改写核心功能逻辑。所有功能版权归原作者所有。
+
+**English README**: [README.en.md](README.en.md)
+
+> 界面文案与文档已翻译为中文。系统语言为中文时，应用会自动显示中文界面。
 
 ---
 

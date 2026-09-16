@@ -213,5 +213,4 @@
     <string name="label_target_uid_placeholder">输入目标 Firebase UID</string>
     <string name="btn_syncing">同步中…</string>
     <string name="msg_unknown_error">未知错误</string>
-    <string name="about_zh_fork_note">简体中文本地化分支。原作者：Juby210 · 上游：s1ddhants1/SwiftBackupPrem</string>
 </resources>

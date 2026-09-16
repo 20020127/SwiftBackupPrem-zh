@@ -117,6 +117,13 @@ fun AboutScreen() {
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.9f)
                 )
+
+                Text(
+                    text = stringResource(R.string.about_zh_fork_note),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.75f),
+                    modifier = Modifier.padding(top = 4.dp)
+                )
             }
         }
 

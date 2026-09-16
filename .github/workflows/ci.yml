@@ -104,10 +104,17 @@ jobs:
         if: always()
         run: find app/build/outputs -type f \( -name "*.apk" -o -name "*.aab" \) -print || true
 
-      - name: Upload Debug APK
-        uses: actions/upload-artifact@v4
-        if: always()
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: success() && (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main')
         with:
-          name: SwiftBackupPrem-debug
-          path: app/build/outputs/apk/**/*.apk
-          if-no-files-found: warn
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || format('build-{0}', github.sha) }}
+          name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || format('CI Build {0}', github.sha) }}
+          files: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/outputs/apk/release/*.apk
+          generate_release_notes: true
+          prerelease: true
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

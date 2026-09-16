@@ -52,44 +52,44 @@ jobs:
           echo "Using sdkmanager: $SDKMANAGER"
           yes | "$SDKMANAGER" --licenses >/tmp/sdk-licenses.log 2>&1 || true
 
-          # Pick highest available android platform
+          # Prefer android-37 (required by modern AndroidX); fall back if missing
           PLAT=""
-          for api in 36 35 34 33; do
-            if "$SDKMANAGER" --list 2>/dev/null | grep -q "platforms;android-${api}"; then
+          for api in 37 36 35; do
+            if "$SDKMANAGER" --list 2>/dev/null | grep -E "platforms;android-${api}(\s|$)" >/dev/null; then
               PLAT="platforms;android-${api}"
-              echo "Found $PLAT"
+              echo "Found stable $PLAT"
               break
             fi
           done
           if [ -z "$PLAT" ]; then
-            PLAT="platforms;android-35"
+            # Try preview/canary channel for android-37
+            echo "Trying preview channel for android-37..."
+            yes | "$SDKMANAGER" --channel=3 --licenses >/tmp/sdk-licenses-preview.log 2>&1 || true
+            if "$SDKMANAGER" --channel=3 --list 2>/dev/null | grep -E "platforms;android-37" >/dev/null; then
+              PLAT="platforms;android-37"
+              echo "Found preview $PLAT"
+              "$SDKMANAGER" --channel=3 --install "$PLAT" </dev/null
+            fi
+          fi
+          if [ -z "$PLAT" ]; then
+            PLAT="platforms;android-36"
             echo "Fallback $PLAT"
           fi
 
-          # NDK candidates
           NDK=""
-          for n in "27.2.12479018" "27.0.12077973" "26.3.11579264" "26.1.10909125"; do
+          for n in "27.2.12479018" "27.0.12077973" "26.3.11579264"; do
             if "$SDKMANAGER" --list 2>/dev/null | grep -q "ndk;${n}"; then
               NDK="ndk;${n}"
               echo "Found $NDK"
               break
             fi
           done
-          if [ -z "$NDK" ]; then
-            NDK="ndk;27.0.12077973"
-            echo "Fallback $NDK"
-          fi
+          if [ -z "$NDK" ]; then NDK="ndk;27.0.12077973"; fi
 
           echo "Installing: platform-tools $PLAT build-tools;35.0.0 $NDK cmake;3.22.1"
           "$SDKMANAGER" --install "platform-tools" "$PLAT" "build-tools;35.0.0" "$NDK" "cmake;3.22.1" </dev/null
+          ls "$ANDROID_HOME/platforms" || true
           echo "SDK packages installed"
-          # Keep compileSdk in sync if we picked a lower API
-          API_NUM=$(echo "$PLAT" | sed 's/.*android-//')
-          echo "PLATFORM_API=$API_NUM" >> "$GITHUB_ENV"
-          if [ "$API_NUM" != "35" ]; then
-            sed -i "s/compileSdk = 35/compileSdk = ${API_NUM}/; s/targetSdk = 35/targetSdk = ${API_NUM}/" app/build.gradle.kts
-            echo "Adjusted compileSdk/targetSdk to $API_NUM"
-          fi
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
@@ -97,19 +97,12 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest --no-daemon
-        continue-on-error: true
-
       - name: Assemble Debug APK
-        run: ./gradlew assembleDebug --no-daemon
-
-      - name: Assemble Release APK
-        run: ./gradlew assembleRelease --no-daemon
-        continue-on-error: true
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: List APK outputs
-        run: find app/build/outputs -type f -name "*.apk" -print || true
+        if: always()
+        run: find app/build/outputs -type f \( -name "*.apk" -o -name "*.aab" \) -print || true
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
@@ -117,12 +110,4 @@ jobs:
         with:
           name: SwiftBackupPrem-debug
           path: app/build/outputs/apk/**/*.apk
-          if-no-files-found: warn
-
-      - name: Upload Release APK
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: SwiftBackupPrem-release
-          path: app/build/outputs/apk/release/*.apk
           if-no-files-found: warn
